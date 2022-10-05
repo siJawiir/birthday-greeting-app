@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BirthdayPage from "./pages/BirthdayPage";
+import IndexPage from "./pages/IndexPage";
+import SpinwheelPage from "./pages/SpinwheelPage";
+import "./index.css";
+import { createStore, StateMachineProvider } from "little-state-machine";
+
+createStore({});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateMachineProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<IndexPage />} />
+          <Route path="/birthday" element={<BirthdayPage />} />
+          <Route path="/spinwheel" element={<SpinwheelPage />} />
+        </Routes>
+      </Router>
+    </StateMachineProvider>
   );
 }
 
