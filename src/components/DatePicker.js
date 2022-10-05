@@ -9,8 +9,7 @@ function DatePicker() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-    getValues,
+    formState: { errors }
   } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
   const onSubmit = (data) => {

@@ -54,36 +54,36 @@ function DateCalculate() {
     ageString =
       "You're now " +
       age.years +
-      " years" +
+      " years " +
       age.months +
-      " months" +
+      " months " +
       age.days +
       " days";
     gift = false;
-  } else if (age.years == 0 && age.months == 0 && age.days > 0) {
+  } else if (age.years === 0 && age.months === 0 && age.days > 0) {
     ageString = "You're now " + age.days + " days old!";
     gift = false;
-  } else if (age.years > 0 && age.months == 0 && age.days == 0) {
+  } else if (age.years > 0 && age.months === 0 && age.days === 0) {
     ageString =
       "WE WISH YOU HAPPY BIRTHDAY ON " +
       datas.toISOString().replace(/T.*/, "").split("-").reverse().join("-");
     gift = true;
-  } else if (age.years > 0 && age.months > 0 && age.days == 0) {
+  } else if (age.years > 0 && age.months > 0 && age.days === 0) {
     ageString =
       "You're now " + age.years + " years and " + age.months + " months old.";
     gift = false;
-  } else if (age.years == 0 && age.months > 0 && age.days > 0) {
+  } else if (age.years === 0 && age.months > 0 && age.days > 0) {
     ageString =
       "You're now " + age.months + " months and " + age.days + " days old.";
     gift = false;
-  } else if (age.years > 0 && age.months == 0 && age.days > 0) {
+  } else if (age.years > 0 && age.months === 0 && age.days > 0) {
     ageString =
       "You're now " + age.years + " years, and" + age.days + " days old.";
     gift = false;
-  } else if (age.years == 0 && age.months > 0 && age.days == 0) {
+  } else if (age.years === 0 && age.months > 0 && age.days === 0) {
     ageString = "You're now " + age.months + " months old.";
     gift = false;
-  } else if (age.years == 0 && age.months == 0 && age.days == 0) {
+  } else if (age.years === 0 && age.months === 0 && age.days === 0) {
     ageString = "Welcome to the World!";
     gift = true;
   } else {
