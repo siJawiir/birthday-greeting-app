@@ -96,7 +96,7 @@ function DateCalculate() {
     const greet = ageString;
     const navigate = useNavigate();
     return (
-      <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-3/5 shadow-xl flex flex-col justify-center text-sm dark:bg-gray-800">
+      <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-86 shadow-xl flex flex-col justify-center text-sm dark:bg-gray-800">
         <p className="text-lg text-center font-bold my-4 md:text-xl mx-1 text-teal-600 dark:text-pink-600">
           {greet}
         </p>
@@ -121,7 +121,7 @@ function DateCalculate() {
     const greet = ageString;
     const navigate = useNavigate();
     return (
-      <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-3/5 shadow-xl flex flex-col justify-center text-sm dark:bg-gray-800">
+      <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-96 shadow-xl flex flex-col justify-center text-sm dark:bg-gray-800">
         <p className="text-lg text-center font-bold mb-4 md:text-xl  text-pink-600 dark:text-white">{greet}</p>
         <img
           class="w-40 rounded-lg mx-auto mb-8"

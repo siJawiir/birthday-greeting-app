@@ -20,7 +20,7 @@ function DatePicker() {
     <React.Fragment>
       <section>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-3/5 shadow-xl flex flex-col justify-center text-sm text-pink-600 dark:bg-gray-800 dark:text-white">
+          <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-96 shadow-xl flex flex-col justify-center text-sm text-pink-600 dark:bg-gray-800 dark:text-white">
             <p className="text-xl text-center font-bold text-pink-500 dark:text-white pb-8">
               BIRTHDAY CHECKER
             </p>
@@ -28,7 +28,7 @@ function DatePicker() {
               <div>
                 <input
                   type="date"
-                  className={`md:w-96 md:h-10 md:text-lg w-52 text-md rounded-lg shadow-md text-center border dark:bg-gray-700 dark:border-gray-900 dark:text-white ${
+                  className={`md:w-80 md:h-10 md:text-lg w-52 text-md rounded-lg shadow-md text-center border dark:bg-gray-700 dark:border-gray-900 dark:text-white ${
                     errors.date &&
                     "focus:border-red-600 focus:ring-red-600 border-red-600"
                   }`}

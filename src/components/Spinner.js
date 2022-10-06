@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function Spinner() {
   const navigate = useNavigate();
   return (
-    <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-3/5 shadow-xl flex flex-col justify-center text-sm dark:bg-gray-800">
+    <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-86 shadow-xl flex flex-col justify-center text-sm dark:bg-gray-800">
       <p className="text-base text-center font-bold text-pink-500 dark:text-white pb-8">
         LUCKY WHEEL
       </p>
