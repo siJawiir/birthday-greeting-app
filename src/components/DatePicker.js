@@ -9,7 +9,7 @@ function DatePicker() {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
   const onSubmit = (data) => {
@@ -20,17 +20,15 @@ function DatePicker() {
     <React.Fragment>
       <section>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mx-2 md:mx-auto bg-slate-50 w-auto h-80 mt-20 mb-auto rounded-lg md:w-3/5 shadow-xl">
-            <div className="flex items-center justify-center h-24 mx-4">
-              <p className="text-lg font-bold text-pink-600 md:text-3xl ">
-                Birthday Checker!
-              </p>
-            </div>
+          <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-3/5 shadow-xl flex flex-col justify-center text-sm text-pink-600 dark:bg-gray-800 dark:text-white">
+            <p className="text-xl text-center font-bold text-pink-500 dark:text-white pb-8">
+              BIRTHDAY CHECKER
+            </p>
             <div className="grid justify-center mt-4">
               <div>
                 <input
                   type="date"
-                  className={`md:w-96 md:h-10 md:text-lg w-52 text-md rounded-lg shadow-md text-center border ${
+                  className={`md:w-96 md:h-10 md:text-lg w-52 text-md rounded-lg shadow-md text-center border dark:bg-gray-700 dark:border-gray-900 dark:text-white ${
                     errors.date &&
                     "focus:border-red-600 focus:ring-red-600 border-red-600"
                   }`}
@@ -54,7 +52,7 @@ function DatePicker() {
               <input
                 type="submit"
                 value="Submit"
-                className="md:w-1/3 md:h-10 text-md md:text-lg w-1/3 h-8  bg-teal-500 text-white rounded-lg"
+                className="md:w-1/3 md:h-10 text-md md:text-lg w-1/3 h-8  bg-teal-600 text-white rounded-lg shadow-md dark:bg-teal-700"
               ></input>
             </div>
           </div>
