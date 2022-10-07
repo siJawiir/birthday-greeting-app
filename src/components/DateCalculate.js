@@ -100,10 +100,10 @@ function DateCalculate() {
     const navigate = useNavigate();
     return (
       <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-86 shadow-xl flex flex-col justify-center text-sm dark:bg-gray-800">
-        <p className="text-lg text-center font-bold mt-4 md:text-xl mx-5 dark:text-teal-500 text-teal-600">
+        <p className="text-lg text-center font-bold mt-4 mx-5 dark:text-teal-500 text-teal-600">
           WE WISH YOU HAPPY BIRTHDAY ON
         </p>
-        <p className="text-2xl text-center font-bold mb-4 md:text-xl mx-5 dark:text-white text-pink-600">
+        <p className="text-2xl text-center font-bold mb-4 md:text-2xl mx-5 dark:text-white text-pink-600">
           {greet}
         </p>
         <img
