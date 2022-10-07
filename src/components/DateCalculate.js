@@ -64,9 +64,12 @@ function DateCalculate() {
     ageString = "You're now " + age.days + " days old!";
     gift = false;
   } else if (age.years > 0 && age.months === 0 && age.days === 0) {
-    ageString =
-      "WE WISH YOU HAPPY BIRTHDAY ON " +
-      datas.toISOString().replace(/T.*/, "").split("-").reverse().join("-");
+    ageString = datas
+      .toISOString()
+      .replace(/T.*/, "")
+      .split("-")
+      .reverse()
+      .join("-");
     gift = true;
   } else if (age.years > 0 && age.months > 0 && age.days === 0) {
     ageString =
@@ -84,7 +87,7 @@ function DateCalculate() {
     ageString = "You're now " + age.months + " months old.";
     gift = false;
   } else if (age.years === 0 && age.months === 0 && age.days === 0) {
-    ageString = "Welcome to the World!";
+    ageString = "TODAY !!!";
     gift = true;
   } else {
     ageString = "Are you sure?!";
@@ -97,7 +100,10 @@ function DateCalculate() {
     const navigate = useNavigate();
     return (
       <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-86 shadow-xl flex flex-col justify-center text-sm dark:bg-gray-800">
-        <p className="text-lg text-center font-bold my-4 md:text-xl mx-1 text-teal-600 dark:text-pink-600">
+        <p className="text-lg text-center font-bold mt-4 md:text-xl mx-5 dark:text-teal-500 text-teal-600">
+          WE WISH YOU HAPPY BIRTHDAY ON
+        </p>
+        <p className="text-2xl text-center font-bold mb-4 md:text-xl mx-5 dark:text-white text-pink-600">
           {greet}
         </p>
         <img
@@ -122,7 +128,9 @@ function DateCalculate() {
     const navigate = useNavigate();
     return (
       <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-96 shadow-xl flex flex-col justify-center text-sm dark:bg-gray-800">
-        <p className="text-lg text-center font-bold mb-4 md:text-xl  text-pink-600 dark:text-white">{greet}</p>
+        <p className="text-lg text-center font-bold mb-4 md:text-xl  text-pink-600 dark:text-white">
+          {greet}
+        </p>
         <img
           class="w-40 rounded-lg mx-auto mb-8"
           src="https://cdn-icons-png.flaticon.com/512/7486/7486747.png"

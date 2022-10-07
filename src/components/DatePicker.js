@@ -20,41 +20,36 @@ function DatePicker() {
     <React.Fragment>
       <section>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-96 shadow-xl flex flex-col justify-center text-sm text-pink-600 dark:bg-gray-800 dark:text-white">
-            <p className="text-xl text-center font-bold text-pink-500 dark:text-white pb-8">
-              BIRTHDAY CHECKER
-            </p>
-            <div className="grid justify-center mt-4">
+          <div className="flex flex-col mx-2 md:mx-auto bg-slate-100 w-96 h-96 rounded-lg md:w-96 shadow-xl text-sm text-gray-600 dark:bg-gray-800 dark:text-white">
+            <div className=" bg-gray-200 dark:bg-teal-600 rounded-t shadow">
+              <p className="text-xl md:text-2xl text-center flex justify-center py-6 font-bold text-teal-600 dark:text-white pb-8">
+                BIRTHDAY CHECKER
+              </p>
+            </div>
+            <div className="grid justify-center my-auto">
               <div>
                 <input
                   type="date"
-                  className={`md:w-80 md:h-10 md:text-lg w-52 text-md rounded-lg shadow-md text-center border dark:bg-gray-700 dark:border-gray-900 dark:text-white ${
+                  className={`md:w-80 md:h-10 md:text-lg h-8 w-60 text-md rounded-lg shadow-md text-center border dark:bg-gray-700 dark:border-gray-900 dark:text-white ${
                     errors.date &&
                     "focus:border-red-600 focus:ring-red-600 border-red-600"
                   }`}
                   {...register("date", {
-                    required: "Masukkan tanggal lahir kamu!",
                     valueAsDate: true,
                   })}
                   defaultValue={state.date}
                   required
                 ></input>
               </div>
-              <div className="mt-2 text-center">
-                {errors.date && (
-                  <span className=" text-red-600 text-sm">
-                    Masukkan tanggal lahir kamu!
-                  </span>
-                )}
-              </div>
-            </div>
-            <div className="flex justify-center mt-8">
+              <div className="flex justify-center mt-6">
               <input
                 type="submit"
                 value="Submit"
                 className="md:w-1/3 md:h-10 text-md md:text-lg w-1/3 h-8  bg-teal-600 text-white rounded-lg shadow-md dark:bg-teal-700"
               ></input>
             </div>
+            </div>
+            
           </div>
         </form>
       </section>

@@ -1,10 +1,8 @@
-import React from 'react'
-import Spinner from '../components/Spinner'
+import React from "react";
+import Spinner from "../components/Spinner";
 
 function SpinwheelPage() {
-  return (
-    <Spinner/>
-  )
+  return <Spinner />;
 }
 
-export default SpinwheelPage
+export default SpinwheelPage;

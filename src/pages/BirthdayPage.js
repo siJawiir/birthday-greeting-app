@@ -1,12 +1,8 @@
-import React from 'react'
-import DateCalculate from '../components/DateCalculate'
+import React from "react";
+import DateCalculate from "../components/DateCalculate";
 
 function BirthdayPage() {
-  return (
-    <React.Fragment>
-      <DateCalculate/>
-    </React.Fragment>
-  )
+  return <DateCalculate />;
 }
 
-export default BirthdayPage
+export default BirthdayPage;
